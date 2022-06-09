@@ -48,7 +48,7 @@ public class SectionRepository {
     }
 
 
-    public Section toEntity(SectionDto sectionDto) {
+    private Section toEntity(SectionDto sectionDto) {
         return new Section(sectionDto.getId(),
                 lineDao.getById(sectionDto.getLineId()), sectionDto.getUpStationId(), sectionDto.getDownStationId(),
                         sectionDto.getDistance());
